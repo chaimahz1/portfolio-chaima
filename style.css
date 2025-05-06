@@ -368,8 +368,15 @@ section .button button:hover{
     font-weight: 700;
     box-shadow: 0 0 40px #FF5470;
 }
-
-
+@media screen and (max-width: 768px) {
+  section .button button {
+    width: 90%;
+    font-size: 1rem;
+    white-space: normal; /* Permet le retour à la ligne contrôlé si nécessaire */
+    text-align: center;
+    line-height: 1.4;
+  }
+}
 /**Fin de la page à propos**/
 
 /* Section Compétences */
