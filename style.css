@@ -283,6 +283,64 @@ section{
     }
 }
 
+.theme-toggle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto 0 auto;
+    gap: 10px;
+  }
+  
+  .switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 26px;
+  }
+  
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0; left: 0;
+    right: 0; bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 34px;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 20px; width: 20px;
+    left: 3px; bottom: 3px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+  }
+  
+  input:checked + .slider {
+    background-color: #FF5470;
+  }
+  
+  input:checked + .slider:before {
+    transform: translateX(24px);
+  }
+  
+  .mode-label {
+    color: white;
+    font-size: 1rem;
+  }
+  
+  body.light-mode .mode-label {
+    color: black;
+  }
+  
 /**Page à propos**/
 section .contente{
     width: 70%;
@@ -780,6 +838,157 @@ section .button button:hover{
 #footer:hover {
     box-shadow: 0 0 40px #FF5470;
 }
+
+/* ======================= MODE CLAIR COMPLET ======================= */
+body.light-mode {
+    background-color: #f2f2f2 ;
+    color: black;
+  }
+  
+  /* Fond clair pour tous les blocs principaux */
+  body.light-mode nav,
+  body.light-mode .dropdown,
+  body.light-mode .soft-card,
+  body.light-mode .skill-block,
+  body.light-mode .project-card,
+  body.light-mode #footer,
+  body.light-mode .contact-content,
+  body.light-mode .skills,
+  body.light-mode .soft-skills-section,
+  body.light-mode .projects,
+  body.light-mode #contact,
+  body.light-mode .about {
+    background-color: #f2f2f2 !important;
+    color: black;
+    box-shadow: none;
+  }
+  
+  /* Textes noirs */
+  body.light-mode .logo,
+  body.light-mode .nav-container .links a,
+  body.light-mode .about-details .right,
+  body.light-mode .soft-card h3,
+  body.light-mode .soft-card p,
+  body.light-mode .project-card p,
+  body.light-mode .skill-block h3,
+  body.light-mode .title span,
+  body.light-mode .contact-intro,
+  body.light-mode .content,
+  body.light-mode .content h1,
+  body.light-mode .content p,
+  body.light-mode .typewriter {
+    color: black !important;
+  }
+  
+  /* Boutons : fond rose et texte blanc */
+  body.light-mode .content button,
+  body.light-mode form button,
+  body.light-mode section .button button {
+    background-color: #FF5470;
+    color: white !important;
+    border: none;
+  }
+  
+  /* Hover boutons : contour rose, fond transparent, texte rose */
+  body.light-mode .content button:hover,
+  body.light-mode form button:hover,
+  body.light-mode section .button button:hover {
+    background-color: transparent !important;
+    border: 2px solid #FF5470;
+    color: #FF5470 !important;
+    font-weight: bold;
+    box-shadow: 0 0 15px #FF5470;
+  }
+  
+  /* Texte dans le formulaire */
+  body.light-mode #contact .contact-content {
+    background-color: #f4f4f4;
+  }
+  
+  body.light-mode #contact form input,
+  body.light-mode #contact form textarea {
+    background-color: #ffffff;
+    color: #000000;
+    border: 1px solid #bbb;
+    outline: none;
+  }
+  
+  /* Focus : bordure rose légère */
+  body.light-mode #contact form input:focus,
+  body.light-mode #contact form textarea:focus {
+    border: 1px solid #FF5470;
+    box-shadow: 0 0 5px rgba(255, 84, 112, 0.4);
+  }
+  
+  /* Placeholder dans le formulaire */
+  body.light-mode #contact ::placeholder {
+    color: #666;
+  }
+  
+  /* Switch + étiquette "mode clair" */
+  body.light-mode .slider {
+    background-color: #ccc;
+  }
+  
+  body.light-mode .slider:before {
+    background-color: black;
+  }
+  
+  body.light-mode .mode-label {
+    color: black;
+  }
+  
+  /* Icônes de compétences (effet adouci) */
+  body.light-mode .skill-icons img,
+  body.light-mode .soft-card i {
+    filter: drop-shadow(0 0 5px #FF5470);
+  }
+  
+  /* "À propos" texte et titre noir */
+  body.light-mode .about-details .right,
+  body.light-mode .about-details .right p,
+  body.light-mode .about .title span {
+    color: black !important;
+  }
+
+  /* === Style rose avec glow permanent (clair et sombre) === */
+.always-pink {
+    color: #FF5470 !important;
+    text-shadow: 0 0 10px #FF5470;
+    font-weight: 600;
+  }
+  
+
+
+
+
+/* === Amélioration du contraste en mode clair === */
+body.light-mode .skill-block,
+body.light-mode .project-card,
+body.light-mode .soft-card,
+body.light-mode .contact-content {
+  background-color: #e6e6e6 !important; /* plus foncé que le fond général */
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+}
+
+/* Bonus : si tu veux encore plus de relief */
+body.light-mode .project-card,
+body.light-mode .contact-content {
+  border: 1px solid #d0d0d0;
+}
+
+
+/* Positionner le switch en haut à gauche de l'écran */
+.theme-toggle {
+    position: absolute;
+    top: 50px;
+    right: 15px;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
 
 
 
