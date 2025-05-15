@@ -75,3 +75,30 @@ function prevSlide(sliderId) {
     index = (index - 1 + images.length) % images.length;
     images[index].classList.add('active');
 }
+
+const toggle = document.getElementById('theme-switch');
+const body = document.body;
+
+toggle.addEventListener('change', () => {
+  body.classList.toggle('light-mode');
+});
+
+
+const themeSwitch = document.getElementById('theme-switch');
+const modeLabel = document.querySelector('.mode-label');
+
+// Appliquer l'état initial correctement au chargement
+if (document.body.classList.contains('dark-theme')) {
+  modeLabel.textContent = 'Mode clair';
+  themeSwitch.checked = true;
+} else {
+  modeLabel.textContent = 'Mode sombre';
+  themeSwitch.checked = false;
+}
+
+// Gérer le changement de thème avec mise à jour du texte
+themeSwitch.addEventListener('change', () => {
+  const isDark = themeSwitch.checked;
+  document.body.classList.toggle('dark-theme', isDark);
+  modeLabel.textContent = isDark ? 'Mode clair' : 'Mode sombre';
+});
