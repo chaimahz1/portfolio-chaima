@@ -1,4 +1,3 @@
-// === MENU BURGER ===
 function hamburg(){
     const navbar = document.querySelector(".dropdown")
     navbar.style.transform = "translateY(0px)"
@@ -9,9 +8,8 @@ function cancel(){
     navbar.style.transform = "translateY(-500px)"
 }
 
-// === TYPEWRITER EFFECT ===
 const texts = [
-    "Étudiante en première année de BUT Informatique"
+    "Étudiante en deuxième année de BUT Informatique"
 ]
 
 let speed  =100;
@@ -46,7 +44,6 @@ function eraseText(){
 window.onload = typeWriter;
 
 
-// === SLIDER POUR CHAQUE PROJET UNIVERSITAIRE ===
 
 // Aller à l'image suivante
 function nextSlide(sliderId) {
