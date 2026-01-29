@@ -726,15 +726,52 @@ section .button button:hover{
 /* Responsive */
 @media (max-width: 768px) {
     .project-card {
-        margin: 30px 20px;
+        margin: 24px 16px;
+        padding: 16px;
+        max-width: 100%;
     }
 
     .image-slider img {
-        height: 200px;
+        height: 220px;
+    }
+
+    .project-card h3 {
+        font-size: 1.2rem;
+        line-height: 1.3;
+    }
+
+    .project-card p {
+        font-size: 0.95rem;
+        line-height: 1.5;
     }
 
     .project-media video {
-        height: 200px;
+        height: 220px;
+    }
+
+    .image-slider .prev,
+    .image-slider .next {
+        font-size: 1.2rem;
+        padding: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .project-card {
+        margin: 20px 12px;
+        padding: 14px;
+        border-radius: 10px;
+    }
+
+    .image-slider img,
+    .project-media video {
+        height: 190px;
+    }
+
+    .image-slider .prev,
+    .image-slider .next {
+        font-size: 1rem;
+        padding: 7px;
     }
 }
 /* ===== fin de la Section Projets Universitaires ===== */
