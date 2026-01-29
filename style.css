@@ -725,10 +725,15 @@ section .button button:hover{
 
 /* Responsive */
 @media (max-width: 768px) {
+    .projects .contente {
+        width: 92%;
+    }
+
     .project-card {
         margin: 24px 16px;
         padding: 16px;
         max-width: 100%;
+        text-align: left;
     }
 
     .image-slider img {
@@ -738,11 +743,13 @@ section .button button:hover{
     .project-card h3 {
         font-size: 1.2rem;
         line-height: 1.3;
+        text-align: center;
     }
 
     .project-card p {
         font-size: 0.95rem;
         line-height: 1.5;
+        padding: 0;
     }
 
     .project-media video {
@@ -757,6 +764,10 @@ section .button button:hover{
 }
 
 @media (max-width: 480px) {
+    .projects .contente {
+        width: 95%;
+    }
+
     .project-card {
         margin: 20px 12px;
         padding: 14px;
