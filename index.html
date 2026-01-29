@@ -10,7 +10,7 @@
     <link rel="icon" href="img/logo.png" type="image/png">
     <title>Chaima Portfolio</title>
 </head>
-<body>
+<body class="light-mode">
     <!--Menu de navigation-->
     <nav>
         <div class="nav-container">
@@ -34,7 +34,7 @@
                 <a href="#skills">Hard-skills</a>
                 <a href="#skills1">Soft-skils</a>
                 <a href="#projects">Projets universitaires</a>
-                <a href="#contact"></a>"Contact</a>
+                <a href="#contact">Contact</a>
                 <i class="fa-solid fa-xmark cancel" onclick="cancel()"></i>
             </div>
         </div>
@@ -131,8 +131,8 @@
             <a href="https://fr.wikipedia.org/wiki/C_(langage)" target="_blank">
               <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg" alt="C">
             </a>
-              <a href="https://www.php.net/" target="_blank">
-              <img src="https://fr.wikipedia.org/wiki/PHP" alt="PHP">
+            <a href="https://www.php.net/" target="_blank">
+              <img src="img/php.svg" alt="PHP">
             </a>
             <a href="https://www.mysql.com/fr/" target="_blank">
               <img src="img/9.png" alt="SQL">
@@ -157,29 +157,41 @@
         <div class="skill-block">
           <h3>Outils</h3>
           <div class="skill-icons">
-            <a href="https://dbeaver.io/" target="_blank">
-              <img src="img/4.png" alt="DBeaver">
-            </a>
-            <a href="https://code.visualstudio.com/" target="_blank">
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="VSCode">
-            </a>
-            <a href="https://www.virtualbox.org/" target="_blank">
-              <img src="img/8.png" alt="VirtualBox">
-            </a>
-            <a href="https://matchware.com/fr/mindview" target="_blank">
-              <img src="img/3.png" alt="MindView">
+            <a href="https://git-scm.com/" target="_blank">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git">
             </a>
             <a href="https://github.com/" target="_blank">
               <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub">
             </a>
-            <a href="https://www.oracle.com/tools/downloads/sqldev-downloads.html" target="_blank">
-              <img src="img/5.png" alt="Oracle SQL">
+            <a href="https://www.virtualbox.org/" target="_blank">
+              <img src="img/8.png" alt="VirtualBox">
+            </a>
+            <a href="https://code.visualstudio.com/" target="_blank">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="Visual Studio Code">
+            </a>
+            <a href="https://www.eclipse.org/" target="_blank">
+              <img src="img/eclipse.svg" alt="Eclipse">
             </a>
             <a href="https://www.codeblocks.org/" target="_blank">
               <img src="img/6.png" alt="Code::Blocks">
             </a>
-            <a href="https://notepad-plus-plus.org/" target="_blank">
-              <img src="img/7.png" alt="Notepad++">
+            <a href="https://matchware.com/fr/mindview" target="_blank">
+              <img src="img/3.png" alt="MindView">
+            </a>
+            <a href="https://mobaxterm.mobatek.net/" target="_blank">
+              <img src="img/mobaxterm.svg" alt="MobaXterm">
+            </a>
+            <a href="https://www.microsoft.com/fr-fr/microsoft-365/word" target="_blank">
+              <img src="img/word.svg" alt="Microsoft Word">
+            </a>
+            <a href="https://www.microsoft.com/fr-fr/microsoft-365/powerpoint" target="_blank">
+              <img src="img/powerpoint.svg" alt="Microsoft PowerPoint">
+            </a>
+            <a href="https://www.microsoft.com/fr-fr/microsoft-365/excel" target="_blank">
+              <img src="img/excel.svg" alt="Microsoft Excel">
+            </a>
+            <a href="https://www.microsoft.com/fr-fr/microsoft-teams/group-chat-software" target="_blank">
+              <img src="img/teams.svg" alt="Microsoft Teams">
             </a>
           </div>
         </div>
@@ -256,6 +268,16 @@
   <section class="projects" id="projects">
     <div class="contente">
       <div class="title"><span>PROJETS UNIVERSITAIRES</span></div>
+  
+      <!-- Projet 4 : SavoirBleu -->
+      <div class="project-card">
+        <h3>SavoirBleu</h3>
+        <p>Plateforme éducative qui sensibilise les collégiens au réchauffement climatique grâce à des données, cartes et contenus interactifs.</p>
+
+        <div class="project-media">
+          <video src="img/70.mp4" controls preload="metadata"></video>
+        </div>
+
   
       <!-- Projet 1 : Libéra Santé -->
       <div class="project-card">
@@ -345,25 +367,6 @@
           <button class="next" onclick="nextSlide('slider3')">&#10095;</button>
         </div>
       </div>
-  
-      <!-- Projet 4 : Algorithmes de tri -->
-      <div class="project-card">
-        <h3>Comparaison d'algorithmes de tri en C et Python</h3>
-        <p>Étude et implémentation de plusieurs algorithmes : tri à bulles, tri fusion, tri par sélection, insertion, tri par comptage, etc.</p>
-  
-        <div class="image-slider" id="slider4">
-          <img src="img/49.png" class="active" alt="Tri 1">
-          <img src="img/50.png" alt="Tri 2">
-          <img src="img/51.png" alt="Tri 3">
-          <img src="img/52.png" alt="Tri 4">
-          <img src="img/53.png" alt="Tri 5">
-          <img src="img/54.png" alt="Tri 6">
-          <img src="img/55.png" alt="Tri 7">
-          <img src="img/56.png" alt="Tri 8">
-          <img src="img/57.png" alt="Tri 9">
-          <button class="prev" onclick="prevSlide('slider4')">&#10094;</button>
-          <button class="next" onclick="nextSlide('slider4')">&#10095;</button>
-        </div>
       </div>
   
     </div>
@@ -385,7 +388,7 @@
             <!-- Texte d'intro -->
             <p class="contact-intro">Vous avez un projet, une question ou une opportunité ? N’hésitez pas à me contacter, je vous répondrai rapidement !</p>
         
-            <div class="contact-content" data-aos="zoom-in" data-aos-duration="1500">
+            <div class="contact-content">
               <!-- Formulaire -->
               <form action="https://formspree.io/f/mjkywnqd" method="POST"> 
                 <input type="text" name="Nom" id="name" placeholder="Nom complet" required>

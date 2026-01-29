@@ -281,6 +281,19 @@ section{
     .main-container button{
         margin-top: 15px;
     }
+
+    .content h1{
+        font-size: 1.4rem;
+        line-height: 1.3;
+    }
+
+    .content .typewriter{
+        font-size: 1.6rem;
+        line-height: 1.3;
+        min-height: 2.6em;
+        margin-top: 8px;
+        display: block;
+    }
 }
 
 .theme-toggle {
@@ -659,6 +672,20 @@ section .button button:hover{
     overflow: hidden;
 }
 
+.project-media {
+    position: relative;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.project-media video {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+    display: block;
+}
+
 .image-slider img {
     width: 100%;
     height: 300px;
@@ -703,6 +730,10 @@ section .button button:hover{
     }
 
     .image-slider img {
+        height: 200px;
+    }
+
+    .project-media video {
         height: 200px;
     }
 }
@@ -945,11 +976,32 @@ body.light-mode {
   }
   
   /* "À propos" texte et titre noir */
-  body.light-mode .about-details .right,
-  body.light-mode .about-details .right p,
-  body.light-mode .about .title span {
+body.light-mode .about-details .right,
+body.light-mode .about-details .right p,
+body.light-mode .about .title span {
     color: black !important;
-  }
+}
+
+/* Menu mobile en mode clair : meilleur contraste */
+body.light-mode .dropdown {
+    backdrop-filter: none;
+    background-color: #e9e9e9 !important;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.08);
+}
+
+body.light-mode .dropdown .links a {
+    color: #111 !important;
+}
+
+body.light-mode .dropdown .links a:hover {
+    background-color: #FF5470;
+    color: #fff !important;
+}
+
+body.light-mode .hamburg,
+body.light-mode .cancel {
+    color: #111;
+}
 
   /* === Style rose avec glow permanent (clair et sombre) === */
 .always-pink {
