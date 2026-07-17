@@ -633,6 +633,128 @@ section .button button:hover{
 }
 
 /* fin de la Section Compétences */
+/* ===== Section Expérience professionnelle ===== */
+
+.experience-section {
+    padding: 60px 0;
+    background-color: black;
+}
+
+.experience-section .title {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.experience-section .title span {
+    color: white;
+    font-size: 30px;
+    font-weight: 600;
+    position: relative;
+    padding-bottom: 8px;
+}
+
+.experience-section .title span::before,
+.experience-section .title span::after {
+    content: '';
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    background: #FF5470;
+    left: 0;
+    bottom: 0;
+}
+
+.experience-section .title span::after {
+    bottom: -7px;
+    width: 70%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.experience-card {
+    background-color: #16161d;
+    padding: 30px;
+    margin: 0 auto;
+    border-radius: 12px;
+    color: white;
+    max-width: 800px;
+    box-shadow: 0 0 25px rgba(255, 84, 112, 0.2);
+}
+
+.experience-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.experience-header h3 {
+    font-size: 1.5rem;
+    text-shadow: 0 0 10px #FF5470;
+    margin-bottom: 4px;
+}
+
+.experience-company {
+    color: #ccc;
+    font-size: 0.95rem;
+}
+
+.experience-date {
+    color: #FF5470;
+    font-weight: 600;
+    font-size: 0.9rem;
+    white-space: nowrap;
+}
+
+.experience-intro {
+    color: #ccc;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.experience-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 25px 0;
+}
+
+.experience-list li {
+    position: relative;
+    padding-left: 22px;
+    margin-bottom: 12px;
+    color: #ddd;
+    line-height: 1.5;
+}
+
+.experience-list li::before {
+    content: '\f0da';
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    color: #FF5470;
+    position: absolute;
+    left: 0;
+    top: 1px;
+}
+
+.experience-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.experience-tags span {
+    background-color: rgba(255, 84, 112, 0.12);
+    border: 1px solid #FF5470;
+    color: #FF5470;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+}
+
+/* fin de la Section Expérience professionnelle */
 /* ===== Section Projets Universitaires ===== */
 
 .projects {
@@ -785,6 +907,35 @@ section .button button:hover{
         padding: 7px;
     }
 }
+/* Responsive Expérience professionnelle */
+@media (max-width: 768px) {
+    .experience-section .contente {
+        width: 92%;
+    }
+
+    .experience-card {
+        padding: 20px;
+    }
+
+    .experience-header {
+        flex-direction: column;
+    }
+
+    .experience-header h3 {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .experience-section .contente {
+        width: 95%;
+    }
+
+    .experience-card {
+        padding: 16px;
+        border-radius: 10px;
+    }
+}
 /* ===== fin de la Section Projets Universitaires ===== */
 
 /* Section Contactez-nous */
@@ -934,6 +1085,8 @@ body.light-mode {
   body.light-mode .contact-content,
   body.light-mode .skills,
   body.light-mode .soft-skills-section,
+  body.light-mode .experience-section,
+  body.light-mode .experience-card,
   body.light-mode .projects,
   body.light-mode #contact,
   body.light-mode .about {
@@ -941,7 +1094,7 @@ body.light-mode {
     color: black;
     box-shadow: none;
   }
-  
+
   /* Textes noirs */
   body.light-mode .logo,
   body.light-mode .nav-container .links a,
@@ -955,6 +1108,10 @@ body.light-mode {
   body.light-mode .content,
   body.light-mode .content h1,
   body.light-mode .content p,
+  body.light-mode .experience-header h3,
+  body.light-mode .experience-company,
+  body.light-mode .experience-intro,
+  body.light-mode .experience-list li,
   body.light-mode .typewriter {
     color: black !important;
   }
@@ -1066,6 +1223,7 @@ body.light-mode .cancel {
 body.light-mode .skill-block,
 body.light-mode .project-card,
 body.light-mode .soft-card,
+body.light-mode .experience-card,
 body.light-mode .contact-content {
   background-color: #e6e6e6 !important; /* plus foncé que le fond général */
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
@@ -1073,8 +1231,13 @@ body.light-mode .contact-content {
 
 /* Bonus : si tu veux encore plus de relief */
 body.light-mode .project-card,
+body.light-mode .experience-card,
 body.light-mode .contact-content {
   border: 1px solid #d0d0d0;
+}
+
+body.light-mode .experience-tags span {
+  background-color: rgba(255, 84, 112, 0.08);
 }
 
 
