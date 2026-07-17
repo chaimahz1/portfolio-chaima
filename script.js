@@ -9,7 +9,8 @@ function cancel(){
 }
 
 const texts = [
-    "Étudiante en deuxième année de BUT Informatique"
+    "Étudiante en troisième année de BUT Informatique",
+    "À la recherche d'une alternance en data"
 ]
 
 let speed  =100;
