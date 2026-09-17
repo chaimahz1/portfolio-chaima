@@ -8,41 +8,57 @@ function cancel(){
     navbar.style.transform = "translateY(-500px)"
 }
 
-const texts = [
-    "Étudiante en troisième année de BUT Informatique",
-    "À la recherche d'une alternance en data"
-]
+function getTypewriterTexts(){
+    const lang = window.currentLang || "fr";
+    const t = window.translations ? window.translations[lang] : null;
+    return t ? [t.hero_typewriter1, t.hero_typewriter2] : [
+        "Étudiante en troisième année de BUT Informatique",
+        "À la recherche d'une alternance en data"
+    ];
+}
+
+let texts = getTypewriterTexts();
 
 let speed  =100;
 const textElements = document.querySelector(".typewriter-text");
 
 let textIndex = 0;
 let charcterIndex = 0;
+let twTimer = null;
 
 function typeWriter(){
     if (charcterIndex < texts[textIndex].length){
         textElements.innerHTML += texts[textIndex].charAt(charcterIndex);
         charcterIndex++;
-        setTimeout(typeWriter, speed); 
+        twTimer = setTimeout(typeWriter, speed);
     }
     else{
-        setTimeout(eraseText, 1000)
+        twTimer = setTimeout(eraseText, 1000)
     }
 }
 
 function eraseText(){
     if(textElements.innerHTML.length > 0){
         textElements.innerHTML = textElements.innerHTML.slice(0,-1);
-        setTimeout(eraseText, 50)
+        twTimer = setTimeout(eraseText, 50)
     }
     else{
         textIndex = (textIndex + 1) % texts.length;
         charcterIndex = 0;
-        setTimeout(typeWriter, 500)
+        twTimer = setTimeout(typeWriter, 500)
     }
 }
 
 window.onload = typeWriter;
+
+document.addEventListener('languagechange', () => {
+    texts = getTypewriterTexts();
+    textIndex = 0;
+    charcterIndex = 0;
+    clearTimeout(twTimer);
+    textElements.innerHTML = '';
+    twTimer = setTimeout(typeWriter, speed);
+});
 
 
 
@@ -77,12 +93,19 @@ function prevSlide(sliderId) {
 const themeSwitch = document.getElementById('theme-switch');
 const modeLabel = document.querySelector('.mode-label');
 
+function getModeLabel(isDark){
+    const lang = window.currentLang || "fr";
+    const t = window.translations ? window.translations[lang] : null;
+    if (t) return isDark ? t.mode_dark : t.mode_light;
+    return isDark ? 'Mode sombre' : 'Mode clair';
+}
+
 // Par défaut : mode clair (classe light-mode présente dans le HTML)
 if (document.body.classList.contains('light-mode')) {
-  modeLabel.textContent = 'Mode clair';
+  modeLabel.textContent = getModeLabel(false);
   themeSwitch.checked = false;
 } else {
-  modeLabel.textContent = 'Mode sombre';
+  modeLabel.textContent = getModeLabel(true);
   themeSwitch.checked = true;
 }
 
@@ -90,5 +113,9 @@ if (document.body.classList.contains('light-mode')) {
 themeSwitch.addEventListener('change', () => {
   const isDark = themeSwitch.checked;
   document.body.classList.toggle('light-mode', !isDark);
-  modeLabel.textContent = isDark ? 'Mode sombre' : 'Mode clair';
+  modeLabel.textContent = getModeLabel(isDark);
+});
+
+document.addEventListener('languagechange', () => {
+  modeLabel.textContent = getModeLabel(themeSwitch.checked);
 });

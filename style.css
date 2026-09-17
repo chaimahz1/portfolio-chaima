@@ -33,6 +33,20 @@ nav{
     color: white;
     font-size: 2rem;
     font-weight: bold;
+    white-space: nowrap;
+}
+
+.nav-container .links a{
+    white-space: nowrap;
+}
+
+/* Langues avec des libellés plus longs (italien, espagnol) : on resserre
+   un peu la police et les marges pour que la navigation tienne toujours
+   sur une seule ligne, comme en français et en anglais. */
+body.lang-it .nav-container .links a,
+body.lang-es .nav-container .links a{
+    font-size: 1rem;
+    margin: 0 12px;
 }
 
 .logo span{
@@ -163,7 +177,7 @@ section{
     font-size: clamp(1rem, 1rem + 5vw, 1.8rem);
 }
 
-.content h1 span{
+.content h1 .name-highlight{
     color: #FF5470;
     text-shadow: 0  0 10px #FF5470;
 }
@@ -296,14 +310,6 @@ section{
     }
 }
 
-.theme-toggle {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 20px auto 0 auto;
-    gap: 10px;
-  }
-  
   .switch {
     position: relative;
     display: inline-block;
@@ -1277,17 +1283,161 @@ body.light-mode .experience-tags span {
 }
 
 
-/* Positionner le switch en haut à gauche de l'écran */
-.theme-toggle {
+/* Positionner les contrôles (thème + langue) ensemble en haut à droite */
+.top-controls {
     position: absolute;
-    top: 50px;
+    top: calc(100% + 10px);
     right: 15px;
-    z-index: 9999;
+    z-index: 10001;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.theme-toggle {
     display: flex;
     align-items: center;
     gap: 10px;
   }
-  
+
+/* ===== Sélecteur de langue (à côté du switch de thème) ===== */
+.lang-switcher {
+    position: relative;
+    font-family: 'Poppins', sans-serif;
+}
+
+.lang-current {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: rgba(22, 22, 29, 0.9);
+    border: 1px solid #FF5470;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: 0.2s linear;
+}
+
+.lang-current:hover {
+    box-shadow: 0 0 15px #FF5470;
+}
+
+.lang-current img {
+    width: 20px;
+    height: 14px;
+    object-fit: cover;
+    border-radius: 2px;
+}
+
+.lang-current i {
+    font-size: 0.7rem;
+}
+
+.lang-menu {
+    position: absolute;
+    top: calc(100% + 8px);
+    right: 0;
+    background-color: #16161d;
+    border: 1px solid #FF5470;
+    border-radius: 10px;
+    overflow: hidden;
+    min-width: 150px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.4);
+    display: none;
+    flex-direction: column;
+}
+
+.lang-menu.open {
+    display: flex;
+}
+
+.lang-option {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: none;
+    border: none;
+    color: white;
+    padding: 10px 14px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-family: 'Poppins', sans-serif;
+    text-align: left;
+    transition: 0.2s linear;
+}
+
+.lang-option img {
+    width: 20px;
+    height: 14px;
+    object-fit: cover;
+    border-radius: 2px;
+}
+
+.lang-option:hover {
+    background-color: #FF5470;
+}
+
+.lang-option.active {
+    color: #FF5470;
+    font-weight: 700;
+}
+
+.lang-option.active:hover {
+    color: white;
+}
+
+body.light-mode .lang-current {
+    background-color: rgba(255, 255, 255, 0.9);
+    color: black;
+}
+
+body.light-mode .lang-menu {
+    background-color: #ffffff;
+    border-color: #FF5470;
+}
+
+body.light-mode .lang-option {
+    color: black;
+}
+
+body.light-mode .lang-option:hover {
+    background-color: #FF5470;
+    color: white;
+}
+
+@media (max-width: 884px) {
+    .top-controls {
+        right: 10px;
+        gap: 10px;
+    }
+
+    .lang-current span {
+        display: none;
+    }
+
+    .lang-current {
+        padding: 6px 8px;
+    }
+
+    .mode-label {
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 440px) {
+    .top-controls {
+        right: 8px;
+        gap: 8px;
+    }
+
+    .mode-label {
+        display: none;
+    }
+}
+
 
 
 

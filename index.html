@@ -17,36 +17,51 @@
                 Chaima <span> HAOUAZ </span>
             </div>
             <div class="links">
-                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="100"><a href="#accueil">Accueil</a></div>
-                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="200"><a href="#about">À propos</a></div>
-                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="200"><a href="#skills">Hard-skills</a></div>
-                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="300"><a href="#skills1">Soft-skils</a></div>
-                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="350"><a href="#experience">Expérience</a></div>
-                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="400"><a href="#projects">Mes projets universitaires</a></div>
-                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="500"><a href="#contact">Contact</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="100"><a href="#accueil" data-i18n="nav_home">Accueil</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="200"><a href="#about" data-i18n="nav_about">À propos</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="200"><a href="#skills" data-i18n="nav_hardskills">Hard-skills</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="300"><a href="#skills1" data-i18n="nav_softskills">Soft-skils</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="350"><a href="#experience" data-i18n="nav_experience">Expérience</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="400"><a href="#projects" data-i18n="nav_projects">Mes projets universitaires</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="500"><a href="#contact" data-i18n="nav_contact">Contact</a></div>
         </div>
         <i class="fa-solid fa-bars hamburg" onclick="hamburg()"></i>
     </div>
         <div class="dropdown">
             <div class="links">
-                <a href="#index.html">Accueil</a>
-                <a href="#about">À propos</a>
-                <a href="#skills">Hard-skills</a>
-                <a href="#skills1">Soft-skils</a>
-                <a href="#experience">Expérience</a>
-                <a href="#projects">Projets universitaires</a>
-                <a href="#contact">Contact</a>
+                <a href="#index.html" data-i18n="nav_home">Accueil</a>
+                <a href="#about" data-i18n="nav_about">À propos</a>
+                <a href="#skills" data-i18n="nav_hardskills">Hard-skills</a>
+                <a href="#skills1" data-i18n="nav_softskills">Soft-skils</a>
+                <a href="#experience" data-i18n="nav_experience">Expérience</a>
+                <a href="#projects" data-i18n="nav_projects">Projets universitaires</a>
+                <a href="#contact" data-i18n="nav_contact">Contact</a>
                 <i class="fa-solid fa-xmark cancel" onclick="cancel()"></i>
             </div>
         </div>
+        <div class="top-controls">
+          <div class="theme-toggle">
+            <label class="switch">
+              <input type="checkbox" id="theme-switch">
+              <span class="slider"></span>
+            </label>
+            <span class="mode-label">Mode sombre</span>
+          </div>
+          <div class="lang-switcher" id="lang-switcher">
+              <button class="lang-current" id="lang-toggle" type="button" aria-haspopup="true" aria-expanded="false">
+                  <img src="https://flagcdn.com/w40/fr.png" alt="" id="lang-current-flag">
+                  <span id="lang-current-code">FR</span>
+                  <i class="fa-solid fa-chevron-down"></i>
+              </button>
+              <div class="lang-menu" id="lang-menu">
+                  <button class="lang-option" type="button" data-lang="fr"><img src="https://flagcdn.com/w40/fr.png" alt="">Français</button>
+                  <button class="lang-option" type="button" data-lang="en"><img src="https://flagcdn.com/w40/gb.png" alt="">English</button>
+                  <button class="lang-option" type="button" data-lang="it"><img src="https://flagcdn.com/w40/it.png" alt="">Italiano</button>
+                  <button class="lang-option" type="button" data-lang="es"><img src="https://flagcdn.com/w40/es.png" alt="">Español</button>
+              </div>
+          </div>
+        </div>
     </nav>
-<div class="theme-toggle">
-  <label class="switch">
-    <input type="checkbox" id="theme-switch">
-    <span class="slider"></span>
-  </label>
-  <span class="mode-label">Mode sombre</span>
-</div>
 
     <section id="accueil">
         <div class="main-container">
@@ -54,9 +69,9 @@
                 <img src="img/Logo.png" alt="">
             </div>
             <div class="content">
-                <h1 data-aos="fade-left" data-aos-duration="1500" data-aos-delay="700">Bonjour je m'appelle <span>Chaima</span></h1>
-                <div class="typewriter" data-aos="fade-right" data-aos-duration="1500" data-aos-delay="900">Je suis <span class="typewriter-text"></span><label for="">|</label></div>
-                <p data-aos="flip-down" data-aos-duration="1500" data-aos-delay="1100"> Passionnée par le développement et j'adore apprendre et relever des défis.</p>
+                <h1 data-aos="fade-left" data-aos-duration="1500" data-aos-delay="700"><span data-i18n="hero_greeting">Bonjour je m'appelle</span> <span class="name-highlight">Chaima</span></h1>
+                <div class="typewriter" data-aos="fade-right" data-aos-duration="1500" data-aos-delay="900"><span data-i18n="hero_im">Je suis</span> <span class="typewriter-text"></span><label for="">|</label></div>
+                <p data-aos="flip-down" data-aos-duration="1500" data-aos-delay="1100" data-i18n="hero_desc"> Passionnée par le développement et j'adore apprendre et relever des défis.</p>
                 <div class="social-links">
                     <a href="https://github.com/chaimahz1" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1300"><i class="fa-brands fa-github"></i></a>
                     <a href="mailto:chaima.haouaz@etu.u-pec.fr" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1400"><i class="fa-brands fa-google"></i></a>
@@ -64,7 +79,7 @@
                 </div>
                 <div class="btn" data-aos="zoom-in" data-aos-duration="1500" data-aos-delay="1800">
                   <a href="#about">
-                    <button>En savoir plus</button>
+                    <button data-i18n="hero_btn">En savoir plus</button>
                 </a>
                 </div>
             </div>
@@ -72,11 +87,11 @@
     </section>
     <section class="about" id="about">
         <div class="contente">
-        <div class="title"><span>À propos</span></div>
+        <div class="title"><span data-i18n="about_title">À propos</span></div>
         <div class="about-details">
           <div class="right">
-            <div class="topic">Bonjour et bienvenue sur mon portfolio.<br><br></div>
-            <p>
+            <div class="topic" data-i18n-html="about_greeting_html">Bonjour et bienvenue sur mon portfolio.<br><br></div>
+            <p data-i18n-html="about_text_html">
                 Je m'appelle Chaima HAOUAZ, passionnée par l'informatique et les nouvelles technologies, je suis actuellement en troisième année de BUT Informatique parcours Administration, Gestion et Exploitation des Données à l'IUT de Créteil-Vitry (UPEC). Mon parcours a débuté avec un baccalauréat en Mathématiques, Physique-Chimie et NSI, avec une option Mathématiques expertes et section européenne anglais. Ce choix d'études reflète mon intérêt pour la logique, l'analyse et la conception de solutions technologiques innovantes.
 
                <br><br> Je suis actuellement à la recherche d’une alternance dans le domaine de la data (data analyst / business intelligence) pour ma 3ᵉ année de BUT Informatique, à partir de septembre 2026 et pour 12 mois, avec un rythme d’une semaine en cours et une semaine en entreprise. Mobile en Île-de-France. Grâce à mes projets à l’université et à mon stage de fin de deuxième année chez Numilog, j’ai déjà travaillé sur des applications web, sur la collecte, le stockage et le traitement de données, et sur des requêtes SQL complexes en environnement de production, ce qui m’a appris à analyser des informations, automatiser des tâches, collaborer en équipe et travailler de manière organisée.
@@ -86,7 +101,7 @@
             </p>
             <div class="button">
               <a href="img/CV_Chaima_HAOUAZ_Data_Analyst123456789.pdf" download>
-                  <button>Télécharger mon CV</button>
+                  <button data-i18n="about_btn">Télécharger mon CV</button>
               </a>
           </div>
 
@@ -98,12 +113,12 @@
 <section class="skills" id="skills">
     <div class="contente">
 
-      <div class="title"><span>Hard-skills</span></div>
+      <div class="title"><span data-i18n="skills_title">Hard-skills</span></div>
 
       <div class="skill-blocks-container">
 
         <div class="skill-block">
-          <h3>Langages</h3>
+          <h3 data-i18n="skills_langages">Langages</h3>
           <div class="skill-icons">
             <a href="https://developer.mozilla.org/fr/docs/Web/HTML" target="_blank">
               <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML">
@@ -133,7 +148,7 @@
         </div>
 
         <div class="skill-block">
-          <h3>Systèmes d'exploitation</h3>
+          <h3 data-i18n="skills_os">Systèmes d'exploitation</h3>
           <div class="skill-icons">
             <a href="https://www.microsoft.com/fr-fr/windows/windows-11" target="_blank">
               <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/windows8/windows8-original.svg" alt="Windows">
@@ -145,7 +160,7 @@
         </div>
 
         <div class="skill-block">
-          <h3>Outils</h3>
+          <h3 data-i18n="skills_tools">Outils</h3>
           <div class="skill-icons">
             <a href="https://git-scm.com/" target="_blank">
               <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git">
@@ -190,7 +205,7 @@
         </div>
 
         <div class="skill-block">
-          <h3>Langues</h3>
+          <h3 data-i18n="skills_spoken">Langues</h3>
           <div class="skill-icons">
             <img src="https://flagcdn.com/w80/fr.png" alt="Français">
             <img src="https://flagcdn.com/w80/gb.png" alt="Anglais">
@@ -204,50 +219,50 @@
 
   <section class="soft-skills-section" id="skills1">
     <div class="contente">
-      <div class="title"><span>Soft-skills</span></div>
+      <div class="title"><span data-i18n="soft_title">Soft-skills</span></div>
 
       <div class="soft-skills">
 
         <div class="soft-card">
           <i class="fa-solid fa-people-group"></i>
-          <h3>Travail en équipe</h3>
-          <p>Je collabore efficacement avec mes collègues pour atteindre les objectifs communs.</p>
+          <h3 data-i18n="soft1_h">Travail en équipe</h3>
+          <p data-i18n="soft1_p">Je collabore efficacement avec mes collègues pour atteindre les objectifs communs.</p>
         </div>
 
         <div class="soft-card">
           <i class="fa-solid fa-comments"></i>
-          <h3>Communication</h3>
-          <p>Je sais exprimer mes idées clairement et écouter activement les autres.</p>
+          <h3 data-i18n="soft2_h">Communication</h3>
+          <p data-i18n="soft2_p">Je sais exprimer mes idées clairement et écouter activement les autres.</p>
         </div>
 
         <div class="soft-card">
           <i class="fa-solid fa-gears"></i>
-          <h3>Capacité d'adaptation</h3>
-          <p>Je m'adapte rapidement aux nouvelles situations et aux changements.</p>
+          <h3 data-i18n="soft3_h">Capacité d'adaptation</h3>
+          <p data-i18n="soft3_p">Je m'adapte rapidement aux nouvelles situations et aux changements.</p>
         </div>
 
         <div class="soft-card">
           <i class="fa-solid fa-puzzle-piece"></i>
-          <h3>Résolution de problèmes</h3>
-          <p>Je trouve des solutions efficaces face aux défis et obstacles.</p>
+          <h3 data-i18n="soft4_h">Résolution de problèmes</h3>
+          <p data-i18n="soft4_p">Je trouve des solutions efficaces face aux défis et obstacles.</p>
         </div>
 
         <div class="soft-card">
           <i class="fa-solid fa-diagram-project"></i>
-          <h3>Gestion de projet</h3>
-          <p>Je planifie, organise et mène à bien les projets dans les délais impartis.</p>
+          <h3 data-i18n="soft5_h">Gestion de projet</h3>
+          <p data-i18n="soft5_p">Je planifie, organise et mène à bien les projets dans les délais impartis.</p>
         </div>
 
         <div class="soft-card">
           <i class="fa-solid fa-lightbulb"></i>
-          <h3>Autonomie</h3>
-          <p>Je suis capable de travailler de manière indépendante avec efficacité.</p>
+          <h3 data-i18n="soft6_h">Autonomie</h3>
+          <p data-i18n="soft6_p">Je suis capable de travailler de manière indépendante avec efficacité.</p>
         </div>
 
         <div class="soft-card">
           <i class="fa-solid fa-peace"></i>
-          <h3>Gestion du stress</h3>
-          <p>Je garde mon sang-froid et reste concentrée même sous pression.</p>
+          <h3 data-i18n="soft7_h">Gestion du stress</h3>
+          <p data-i18n="soft7_p">Je garde mon sang-froid et reste concentrée même sous pression.</p>
         </div>
 
       </div>
@@ -257,7 +272,7 @@
 
   <section class="experience-section" id="experience">
     <div class="contente">
-      <div class="title"><span>Expérience professionnelle</span></div>
+      <div class="title"><span data-i18n="experience_title">Expérience professionnelle</span></div>
 
       <div class="experience-card">
         <img src="img/numilog_logo.jpg" alt="Logo Numilog" class="experience-logo">
@@ -265,25 +280,25 @@
         <div class="experience-content">
           <div class="experience-header">
             <div>
-              <h3>Stage Data Analyst</h3>
+              <h3 data-i18n="exp_role">Stage Data Analyst</h3>
               <span class="experience-company">Numilog — Bourg-la-Reine (94)</span>
             </div>
-            <span class="experience-date">Avril 2026 – Juin 2026 (8 semaines)</span>
+            <span class="experience-date" data-i18n="exp_date">Avril 2026 – Juin 2026 (8 semaines)</span>
           </div>
 
-          <p class="experience-intro">
+          <p class="experience-intro" data-i18n="exp_intro">
             Stage au sein de l'équipe technique de Numilog, entreprise spécialisée dans la distribution
             et la diffusion de livres numériques, sous la responsabilité du directeur technique. Sept missions
             menées entre exploitation de données de production et conception technique.
           </p>
 
           <ul class="experience-list">
-            <li>Conception de tableaux de bord (dashboards) pour piloter les flux de données et suivre les ventes.</li>
-            <li>Création de scripts SQL pour analyser des données commerciales et aider à la préparation d'offres.</li>
-            <li>Développement de requêtes SQL avancées (CTE, fenêtrage, OUTER APPLY) sur plusieurs bases de production, pour détecter les nouveautés publiées par les auteurs présents dans les wishlists des utilisateurs et préparer des notifications ciblées.</li>
-            <li>Développement en Python d'un script d'extraction automatique de la table des matières de fichiers EPUB (EPUB 2 et EPUB 3), ensuite intégré par un collègue dans le pipeline de traduction automatique par IA de l'entreprise.</li>
-            <li>Rédaction d'une documentation de conception technique pour Numilog AI Translate, un projet de traduction automatique de livres numériques par IA.</li>
-            <li>Vérification de l'indexation SEO d'environ 200 pages via Google Search Console et soumission des pages non indexées à une réindexation.</li>
+            <li data-i18n="exp_li1">Conception de tableaux de bord (dashboards) pour piloter les flux de données et suivre les ventes.</li>
+            <li data-i18n="exp_li2">Création de scripts SQL pour analyser des données commerciales et aider à la préparation d'offres.</li>
+            <li data-i18n="exp_li3">Développement de requêtes SQL avancées (CTE, fenêtrage, OUTER APPLY) sur plusieurs bases de production, pour détecter les nouveautés publiées par les auteurs présents dans les wishlists des utilisateurs et préparer des notifications ciblées.</li>
+            <li data-i18n="exp_li4">Développement en Python d'un script d'extraction automatique de la table des matières de fichiers EPUB (EPUB 2 et EPUB 3), ensuite intégré par un collègue dans le pipeline de traduction automatique par IA de l'entreprise.</li>
+            <li data-i18n="exp_li5">Rédaction d'une documentation de conception technique pour Numilog AI Translate, un projet de traduction automatique de livres numériques par IA.</li>
+            <li data-i18n="exp_li6">Vérification de l'indexation SEO d'environ 200 pages via Google Search Console et soumission des pages non indexées à une réindexation.</li>
           </ul>
 
           <div class="experience-tags">
@@ -301,11 +316,11 @@
 
   <section class="projects" id="projects">
     <div class="contente">
-      <div class="title"><span>PROJETS UNIVERSITAIRES</span></div>
+      <div class="title"><span data-i18n="projects_title">PROJETS UNIVERSITAIRES</span></div>
 
       <div class="project-card">
         <h3>SavoirBleu</h3>
-        <p>Plateforme éducative qui sensibilise les collégiens au réchauffement climatique grâce à des données, cartes et contenus interactifs.</p>
+        <p data-i18n="proj1_p">Plateforme éducative qui sensibilise les collégiens au réchauffement climatique grâce à des données, cartes et contenus interactifs.</p>
 
         <div class="project-media">
           <video src="img/70.mp4" controls preload="metadata"></video>
@@ -314,7 +329,7 @@
 
       <div class="project-card">
         <h3>Hydroclair – Consultation de la qualité de l'eau potable</h3>
-        <p>Application web développée en équipe qui permet de consulter la qualité de l'eau potable selon la localisation, avec un backend en Python (MVC), une base de données locale et une interface interactive en HTML, CSS et JavaScript.</p>
+        <p data-i18n="proj2_p">Application web développée en équipe qui permet de consulter la qualité de l'eau potable selon la localisation, avec un backend en Python (MVC), une base de données locale et une interface interactive en HTML, CSS et JavaScript.</p>
 
         <div class="project-media">
           <video src="img/12.mp4" controls preload="metadata"></video>
@@ -323,7 +338,7 @@
 
       <div class="project-card">
         <h3>Libéra Santé</h3>
-        <p>Site web d'analyse des dépenses de santé libérale en France. Développement avec Flask, SQLite, Matplotlib.</p>
+        <p data-i18n="proj3_p">Site web d'analyse des dépenses de santé libérale en France. Développement avec Flask, SQLite, Matplotlib.</p>
 
         <div class="project-media">
           <video src="img/11.mp4" controls preload="metadata"></video>
@@ -332,7 +347,7 @@
 
       <div class="project-card">
         <h3>INICE – RSE IKEA</h3>
-        <p>Étude et site web sur la RSE d'IKEA, développement en HTML, CSS et JavaScript.</p>
+        <p data-i18n="proj4_p">Étude et site web sur la RSE d'IKEA, développement en HTML, CSS et JavaScript.</p>
 
         <div class="project-media">
           <video src="img/15.mp4" controls preload="metadata"></video>
@@ -341,7 +356,7 @@
 
       <div class="project-card">
         <h3>Exploration algorithmique et données spatiales – Vélib'</h3>
-        <p>Analyse du réseau Vélib' à partir de données Open Data. Implémentation en Python d'algorithmes avancés (Delaunay, Kruskal), modélisation en graphe, traitement de données JSON et visualisation interactive avec Folium.</p>
+        <p data-i18n="proj5_p">Analyse du réseau Vélib' à partir de données Open Data. Implémentation en Python d'algorithmes avancés (Delaunay, Kruskal), modélisation en graphe, traitement de données JSON et visualisation interactive avec Folium.</p>
 
         <div class="project-media">
           <video src="img/14.mp4" controls preload="metadata"></video>
@@ -351,7 +366,7 @@
 
       <div class="project-card">
         <h3>Chez Chaima</h3>
-        <p>Site web d'un restaurant fictif. Concept, menu, identité visuelle, développement du site web.</p>
+        <p data-i18n="proj6_p">Site web d'un restaurant fictif. Concept, menu, identité visuelle, développement du site web.</p>
 
         <div class="project-media">
           <video src="img/13.mp4" controls preload="metadata"></video>
@@ -365,18 +380,18 @@
         <section id="contact">
           <div class="container">
             <div class="title">
-              <span>CONTACTEZ-MOI</span>
+              <span data-i18n="contact_title">CONTACTEZ-MOI</span>
             </div>
 
-            <p class="contact-intro">Vous avez un projet, une question ou une opportunité ? N'hésitez pas à me contacter, je vous répondrai rapidement !</p>
+            <p class="contact-intro" data-i18n="contact_intro">Vous avez un projet, une question ou une opportunité ? N'hésitez pas à me contacter, je vous répondrai rapidement !</p>
 
             <div class="contact-content">
               <form action="https://formspree.io/f/mjkywnqd" method="POST">
-                <input type="text" name="Nom" id="name" placeholder="Nom complet" required>
-                <input type="email" name="email" id="email" placeholder="Adresse e-mail" required>
-                <input type="text" name="sujet" id="subject" placeholder="Sujet" required>
-                <textarea name="message" id="message" cols="30" rows="5" placeholder="Message" required></textarea>
-                <button type="submit" class="btn">Envoyer le message</button>
+                <input type="text" name="Nom" id="name" placeholder="Nom complet" data-i18n-placeholder="contact_name_placeholder" required>
+                <input type="email" name="email" id="email" placeholder="Adresse e-mail" data-i18n-placeholder="contact_email_placeholder" required>
+                <input type="text" name="sujet" id="subject" placeholder="Sujet" data-i18n-placeholder="contact_subject_placeholder" required>
+                <textarea name="message" id="message" cols="30" rows="5" placeholder="Message" data-i18n-placeholder="contact_message_placeholder" required></textarea>
+                <button type="submit" class="btn" data-i18n="contact_btn">Envoyer le message</button>
               </form>
             </div>
           </div>
@@ -384,13 +399,14 @@
 
 
         <footer id="footer">
-            <p>Copyright &copy; 2025 Tous droits réservé | Créé par Chaima HAOUAZ</p>
+            <p data-i18n="footer_text">Copyright &copy; 2025 Tous droits réservé | Créé par Chaima HAOUAZ</p>
         </footer>
 
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
       AOS.init({offset:0});
     </script>
+    <script src="lang.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
