@@ -856,6 +856,66 @@ section .button button:hover{
     box-shadow: 0 0 25px #FF5470;
 }
 
+.project-demo {
+    margin-top: 20px;
+    text-align: left;
+    background-color: rgba(255, 84, 112, 0.08);
+    border: 1px solid rgba(255, 84, 112, 0.3);
+    border-radius: 10px;
+    padding: 16px 20px;
+}
+
+.project-demo-title {
+    color: #FF5470;
+    font-weight: 700;
+    margin-bottom: 12px;
+    font-size: 0.95rem;
+}
+
+.project-demo-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.project-demo-account {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    min-width: 200px;
+}
+
+.project-demo-role {
+    color: white;
+    font-weight: 700;
+    margin-bottom: 2px;
+}
+
+.project-demo-line {
+    color: #ccc;
+    font-size: 0.9rem;
+}
+
+.project-demo-line code {
+    background-color: rgba(255, 255, 255, 0.08);
+    padding: 2px 6px;
+    border-radius: 4px;
+    color: #FF5470;
+    font-family: 'Courier New', monospace;
+}
+
+body.light-mode .project-demo-role {
+    color: #111;
+}
+
+body.light-mode .project-demo-line {
+    color: #333;
+}
+
+body.light-mode .project-demo-line code {
+    background-color: rgba(0, 0, 0, 0.06);
+}
+
 .image-slider img {
     width: 100%;
     height: 300px;
