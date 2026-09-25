@@ -60,6 +60,7 @@ const translations = {
     proj4_p: "Étude et site web sur la RSE d'IKEA, développement en HTML, CSS et JavaScript.",
     proj5_p: "Analyse du réseau Vélib' à partir de données Open Data. Implémentation en Python d'algorithmes avancés (Delaunay, Kruskal), modélisation en graphe, traitement de données JSON et visualisation interactive avec Folium.",
     proj6_p: "Site web d'un restaurant fictif. Concept, menu, identité visuelle, développement du site web.",
+    proj_visit_btn: "Voir le site",
 
     contact_title: "CONTACTEZ-MOI",
     contact_intro: "Vous avez un projet, une question ou une opportunité ? N'hésitez pas à me contacter, je vous répondrai rapidement !",
@@ -136,6 +137,7 @@ const translations = {
     proj4_p: "A study and website on IKEA's CSR, developed in HTML, CSS and JavaScript.",
     proj5_p: "Analysis of the Vélib' bike-sharing network using Open Data. Python implementation of advanced algorithms (Delaunay, Kruskal), graph modeling, JSON data processing and interactive visualization with Folium.",
     proj6_p: "A website for a fictional restaurant. Concept, menu, visual identity, and website development.",
+    proj_visit_btn: "Visit website",
 
     contact_title: "CONTACT ME",
     contact_intro: "Do you have a project, a question or an opportunity? Feel free to contact me, I will reply quickly!",
@@ -212,6 +214,7 @@ const translations = {
     proj4_p: "Studio e sito web sulla RSI di IKEA, sviluppato in HTML, CSS e JavaScript.",
     proj5_p: "Analisi della rete di bike sharing Vélib' a partire da dati Open Data. Implementazione in Python di algoritmi avanzati (Delaunay, Kruskal), modellazione a grafo, elaborazione di dati JSON e visualizzazione interattiva con Folium.",
     proj6_p: "Sito web di un ristorante immaginario. Concept, menu, identità visiva e sviluppo del sito web.",
+    proj_visit_btn: "Visita il sito",
 
     contact_title: "CONTATTAMI",
     contact_intro: "Hai un progetto, una domanda o un'opportunità? Non esitare a contattarmi, ti risponderò rapidamente!",
@@ -288,6 +291,7 @@ const translations = {
     proj4_p: "Estudio y sitio web sobre la RSC de IKEA, desarrollado en HTML, CSS y JavaScript.",
     proj5_p: "Análisis de la red de bicicletas compartidas Vélib' a partir de datos abiertos (Open Data). Implementación en Python de algoritmos avanzados (Delaunay, Kruskal), modelado en grafos, procesamiento de datos JSON y visualización interactiva con Folium.",
     proj6_p: "Sitio web de un restaurante ficticio. Concepto, menú, identidad visual y desarrollo del sitio web.",
+    proj_visit_btn: "Visitar el sitio",
 
     contact_title: "CONTÁCTAME",
     contact_intro: "¿Tienes un proyecto, una pregunta o una oportunidad? No dudes en contactarme, ¡te responderé rápidamente!",
