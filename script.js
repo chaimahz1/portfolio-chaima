@@ -13,7 +13,7 @@ function getTypewriterTexts(){
     const t = window.translations ? window.translations[lang] : null;
     return t ? [t.hero_typewriter1, t.hero_typewriter2] : [
         "Étudiante en troisième année de BUT Informatique",
-        "À la recherche d'une alternance en data"
+        "à la recherche d'un stage ou d'une alternance en data & IA"
     ];
 }
 
